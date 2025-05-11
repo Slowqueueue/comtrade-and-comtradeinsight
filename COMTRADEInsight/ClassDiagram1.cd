@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="COMTRADEInsight.Views.ConfigForm" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>BEAAAAAAACAAAAAICACAMgASAIAAAAIAAACgACgAMAA=</HashCode>
+      <FileName>Views\ConfigForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="COMTRADEInsight.MainWindowForm" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>BICAABEAgCQiAgAgRESQwgMCAwBgYIAASFAAgARgAGA=</HashCode>
+      <FileName>Views\MainWindowForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="COMTRADEInsight.Views.SaveForm" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AABAAAABBCZAABAABACQBAACAAAIAAAAACCEABEAABQ=</HashCode>
+      <FileName>Views\SaveForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="COMTRADEInsight.ViewModels.MainWindowViewModel" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="COMTRADEInsight.ViewModels.MainWindowViewModel.SimpleCommand" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ViewModels\MainWindowViewModel.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+      <Class Name="COMTRADEInsight.ViewModels.MainWindowViewModel.ObjectCommand" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ViewModels\MainWindowViewModel.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+      <Class Name="COMTRADEInsight.ViewModels.MainWindowViewModel.ConditionCommand" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ViewModels\MainWindowViewModel.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+      <Class Name="COMTRADEInsight.ViewModels.MainWindowViewModel.ObjectConditionCommand" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ViewModels\MainWindowViewModel.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>RQjgs3haChLg8EuAOMtUmJ3AlQELIEphjHxOqgMouEM=</HashCode>
+      <FileName>ViewModels\MainWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="COMTRADEInsight.ViewModels.SaveViewModel" Collapsed="true">
+    <Position X="2.75" Y="1.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="COMTRADEInsight.ViewModels.SaveViewModel.SimpleCommand" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ViewModels\SaveViewModel.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+      <Class Name="COMTRADEInsight.ViewModels.SaveViewModel.ObjectConditionCommand" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ViewModels\SaveViewModel.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAwAAAIMAACEECgAABAEAAhEBAEABBAAA=</HashCode>
+      <FileName>ViewModels\SaveViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="COMTRADEInsight.Models.MainWindowModel" Collapsed="true">
+    <Position X="5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAEAAAAAAIAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\MainWindowModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="COMTRADEInsight.Models.SaveModel" Collapsed="true">
+    <Position X="5" Y="1.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="COMTRADEInsight.Models.SaveModel.SaveSettings">
+        <TypeIdentifier>
+          <NewMemberFileName>Models\SaveModel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Enum Name="COMTRADEInsight.Models.SaveModel.FileFormat">
+        <TypeIdentifier>
+          <NewMemberFileName>Models\SaveModel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Models\SaveModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

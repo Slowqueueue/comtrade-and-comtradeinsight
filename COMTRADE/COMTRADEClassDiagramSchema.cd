@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="COMTRADE.AnalogChannel">
+    <Position X="4" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IQIAAAgABAATLAoEAQByAARAQgIACAABUQNwMAAAaAI=</HashCode>
+      <FileName>AnalogChannel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="COMTRADE.DigitalChannel">
+    <Position X="0.75" Y="3.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAEAQACAAQAAgIAAAAACwEAAAAASAA=</HashCode>
+      <FileName>DigitalChannel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="COMTRADE.ChannelMetadataSorter">
+    <Position X="7" Y="3" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAIAAAAAgAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>ChannelMetadata.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="COMTRADE.Parser">
+    <Position X="14.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAgiATJAAEAAAIACAgAEAACCQFsIAYAugpDAASA=</HashCode>
+      <FileName>Parser.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="COMTRADE.Schema">
+    <Position X="9.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IAEcQwAIABAAhAIgAwwIASAAJAAIgAABAAAAEADggEA=</HashCode>
+      <FileName>Schema.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="COMTRADE.TimeOffset">
+    <Position X="12" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAQAAAEQABAAQAAAAgAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>TimeOffset.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="COMTRADE.Writer">
+    <Position X="12" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AIAAABUAAACAEAABAAAABACAAAAAcAAAAAAEAAAAAAg=</HashCode>
+      <FileName>Writer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="COMTRADE.ChannelMetadata">
+    <Position X="7" Y="5.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAACACAAQAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>ChannelMetadata.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="COMTRADE.Timestamp">
+    <Position X="7" Y="7.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAEEAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Timestamp.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="COMTRADE.SampleRate">
+    <Position X="0.75" Y="7.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAIAAAAAAAAEAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SampleRate.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="COMTRADE.CoordinateFormat" Collapsed="true">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAIAAAAAA=</HashCode>
+      <FileName>AnalogChannel.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="COMTRADE.SignalKind" Collapsed="true">
+    <Position X="0.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEBAEAAAAAABAAAAgAAAAANAAAAAAAEBAAAEAABA=</HashCode>
+      <FileName>AnalogChannel.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="COMTRADE.SignalType" Collapsed="true">
+    <Position X="0.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIIAAIAAAAAAAAAAAQAACAAAABAAAAAIgARAABAFAQA=</HashCode>
+      <FileName>AnalogChannel.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="COMTRADE.SignalQuantity" Collapsed="true">
+    <Position X="0.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AnalogChannel.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="COMTRADE.FileType" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAQCAAAACAAAAAAA=</HashCode>
+      <FileName>Schema.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="COMTRADE.TimeQualityIndicatorCode" Collapsed="true">
+    <Position X="6.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAiAAAAAIAAkAAAAJACABAAAACAAAAAAJAAAAA=</HashCode>
+      <FileName>Schema.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="COMTRADE.LeapSecondIndicator" Collapsed="true">
+    <Position X="6.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAABAAAgQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Schema.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
