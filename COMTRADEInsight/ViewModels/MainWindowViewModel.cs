@@ -1933,7 +1933,7 @@ namespace COMTRADEInsight.ViewModels
         }
 
         // Выполнение дискретного преобразования Фурье
-        private static Complex[] DiscreteFourierTransform(Complex[] input)
+        internal Complex[] DiscreteFourierTransform(Complex[] input)
         {
             int N = input.Length; // Количество входных значений сигнала, измеренных за период
             double mult = -2 * Math.PI / N; // Часть выражения, чтобы не проводить вычисления на каждой итерации

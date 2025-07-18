@@ -11,6 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+	<InternalsVisibleTo Include="COMTRADE.Tests" />
     <Compile Remove="Images\**" />
     <Compile Remove="Resources\**" />
     <EmbeddedResource Remove="Images\**" />
