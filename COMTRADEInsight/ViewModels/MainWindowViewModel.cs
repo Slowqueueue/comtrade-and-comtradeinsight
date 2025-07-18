@@ -1946,7 +1946,7 @@ namespace COMTRADEInsight.ViewModels
                     double radians = n * k * mult; // Аргумент комплексной экспоненты
                     Complex temp = new(Math.Cos(radians), Math.Sin(radians)); // cos(-x) = cos(x), sin(-x) = -sinx
                     temp *= input[n];
-                    output[k] += temp;
+                    output[k] += temp * 5;
                 }
             }
 
