@@ -41,8 +41,8 @@ namespace COMTRADEInsight.ViewModels
         private readonly ICommand scaleYDownCommand; // Команда уменьшения масштаба графиков по Y
         private readonly ICommand emulateDynamicCommand; // Команда эмуляции динамической отрисовки
         private readonly ICommand cropPlotCommand; // Команда обрезки графиков
-        private readonly ICommand changeVisibilityOfFirstVertVisorCommand; // Команда смены видимости первого вертикального визира
-        private readonly ICommand changeVisibilityOfSecondVertVisorCommand; // Команда смены видимости второго вертикального визира
+        private readonly ICommand toggleVisibilityOfFirstVertVisorCommand; // Команда смены видимости первого вертикального визира
+        private readonly ICommand toggleVisibilityOfSecondVertVisorCommand; // Команда смены видимости второго вертикального визира
         private readonly ICommand playFileCommand;
 
         private bool isParserInitialized = false; // Флаг, указывающий, инициализирован ли синтаксический анализатор файлов формата COMTRADE
@@ -102,8 +102,8 @@ namespace COMTRADEInsight.ViewModels
             scaleYDownCommand = new ObjectConditionCommand(ScaleYDown, CanScaleYDown);
             emulateDynamicCommand = new ObjectCommand(EmulateDynamic);
             cropPlotCommand = new SimpleCommand(CropPlot);
-            changeVisibilityOfFirstVertVisorCommand = new SimpleCommand(FirstVertVisorChangeVisibility);
-            changeVisibilityOfSecondVertVisorCommand = new SimpleCommand(SecondVertVisorChangeVisibility);
+            toggleVisibilityOfFirstVertVisorCommand = new SimpleCommand(FirstVertVisorChangeVisibility);
+            toggleVisibilityOfSecondVertVisorCommand = new SimpleCommand(SecondVertVisorChangeVisibility);
             playFileCommand = new SimpleCommand(PlayFile);
         }
 
@@ -255,7 +255,7 @@ namespace COMTRADEInsight.ViewModels
         /// </summary>
         public ICommand СhangeVisibilityOfFirstVertVisorCommand
         {
-            get { return changeVisibilityOfFirstVertVisorCommand; }
+            get { return toggleVisibilityOfFirstVertVisorCommand; }
         }
 
         /// <summary>
@@ -263,7 +263,7 @@ namespace COMTRADEInsight.ViewModels
         /// </summary>
         public ICommand СhangeVisibilityOfSecondVertVisorCommand
         {
-            get { return changeVisibilityOfSecondVertVisorCommand; }
+            get { return toggleVisibilityOfSecondVertVisorCommand; }
         }
 
         public ICommand PlayFileCommand
