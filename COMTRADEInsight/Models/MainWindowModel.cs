@@ -18,19 +18,19 @@ namespace COMTRADEInsight.Models
         /// <summary>
         /// Получает пользовательскую палитру цветов из библиотеки ScottPlot в формате словаря.
         /// </summary>
-        public Dictionary<int, ScottPlot.Color> ColorMap { get; } = new Dictionary<int, ScottPlot.Color>()
-        {
-            { 0, Colors.Purple },
-            { 1, Colors.Green },
-            { 2, Colors.CornflowerBlue },
-            { 3, Colors.Orange },
-            { 4, Colors.Sienna },
-            { 5, Colors.Lime },
-            { 6, Colors.Magenta },
-            { 7, Colors.DarkCyan },
-            { 8, Colors.MediumPurple },
-            { 9, Colors.OrangeRed },
-        };
+        public List<ScottPlot.Color> ColorMap { get; } = 
+        [
+            Colors.Purple,
+            Colors.Green,
+            Colors.CornflowerBlue,
+            Colors.Orange,
+            Colors.Sienna,
+            Colors.Lime,
+            Colors.Magenta,
+            Colors.DarkCyan,
+            Colors.MediumPurple,
+            Colors.OrangeRed,
+        ];
 
         /// <summary>
         /// Получает список кратных и дольных единиц измерения силы тока.
