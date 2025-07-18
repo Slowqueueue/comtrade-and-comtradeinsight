@@ -1,38 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="COMTRADEInsight.Views.ConfigForm" Collapsed="true">
-    <Position X="0.5" Y="2.5" Width="2" />
+  <Class Name="COMTRADEInsight.Views.ConfigForm">
+    <Position X="17.25" Y="0.5" Width="2" />
     <TypeIdentifier>
       <HashCode>BEAAAAAAACAAAAAICACAMgASAIAAAAIAAACgACgAMAA=</HashCode>
       <FileName>Views\ConfigForm.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="COMTRADEInsight.MainWindowForm" Collapsed="true">
-    <Position X="0.5" Y="0.5" Width="2" />
-    <Compartments>
-      <Compartment Name="Fields" Collapsed="true" />
-    </Compartments>
+  <Class Name="COMTRADEInsight.MainWindowForm">
+    <Position X="1.5" Y="0.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>BICAABEAgCQiAgAgRESQwgMCAwBgYIAASFAAgARgAGA=</HashCode>
+      <HashCode>BICAABEAgCQiAgAoRETQwgMCAwBgYIAASFAAgAVgAGA=</HashCode>
       <FileName>Views\MainWindowForm.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="COMTRADEInsight.Views.SaveForm" Collapsed="true">
-    <Position X="0.5" Y="1.5" Width="2" />
-    <Compartments>
-      <Compartment Name="Fields" Collapsed="true" />
-      <Compartment Name="Methods" Collapsed="true" />
-    </Compartments>
+  <Class Name="COMTRADEInsight.Views.SaveForm">
+    <Position X="10.5" Y="0.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AABAAAABBCZAABAABACQBAACAAAIAAAAACCEABEAABQ=</HashCode>
       <FileName>Views\SaveForm.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="COMTRADEInsight.ViewModels.MainWindowViewModel" Collapsed="true">
-    <Position X="2.75" Y="0.5" Width="2" />
+  <Class Name="COMTRADEInsight.ViewModels.MainWindowViewModel">
+    <Position X="3.75" Y="0.5" Width="2" />
     <Compartments>
-      <Compartment Name="Fields" Collapsed="true" />
-      <Compartment Name="Events" Collapsed="true" />
+      <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
     <NestedTypes>
       <Class Name="COMTRADEInsight.ViewModels.MainWindowViewModel.SimpleCommand" Collapsed="true">
@@ -61,17 +53,15 @@
       </Class>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>RQjgs3haChLg8EuAOMtUmJ3AlQELIEphjHxOqgMouEM=</HashCode>
+      <HashCode>RQjgs3haChLg8EuAOMtUmJ3AlQELYEphjHxOqgMouEs=</HashCode>
       <FileName>ViewModels\MainWindowViewModel.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="COMTRADEInsight.ViewModels.SaveViewModel" Collapsed="true">
-    <Position X="2.75" Y="1.5" Width="2" />
+  <Class Name="COMTRADEInsight.ViewModels.SaveViewModel">
+    <Position X="12.75" Y="0.5" Width="2" />
     <Compartments>
-      <Compartment Name="Fields" Collapsed="true" />
-      <Compartment Name="Methods" Collapsed="true" />
-      <Compartment Name="Events" Collapsed="true" />
+      <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
     <NestedTypes>
       <Class Name="COMTRADEInsight.ViewModels.SaveViewModel.SimpleCommand" Collapsed="true">
@@ -93,15 +83,15 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="COMTRADEInsight.Models.MainWindowModel" Collapsed="true">
-    <Position X="5" Y="0.5" Width="2" />
+  <Class Name="COMTRADEInsight.Models.MainWindowModel">
+    <Position X="8.25" Y="0.5" Width="2" />
     <TypeIdentifier>
       <HashCode>ACAAAAAAAAAAAAAAAAAAEAAAAAAIAAEAAAAAAAAAAAA=</HashCode>
       <FileName>Models\MainWindowModel.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="COMTRADEInsight.Models.SaveModel" Collapsed="true">
-    <Position X="5" Y="1.5" Width="2" />
+  <Class Name="COMTRADEInsight.Models.SaveModel">
+    <Position X="15" Y="0.5" Width="2" />
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>

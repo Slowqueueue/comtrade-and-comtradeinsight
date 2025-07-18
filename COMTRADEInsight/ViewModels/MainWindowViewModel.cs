@@ -2,6 +2,7 @@
 using COMTRADE.Helpers;
 using COMTRADEInsight.Models;
 using COMTRADEInsight.Views;
+using NAudio.Wave;
 using ScottPlot;
 using ScottPlot.Plottables;
 using ScottPlot.WinForms;
@@ -42,6 +43,7 @@ namespace COMTRADEInsight.ViewModels
         private readonly ICommand cropPlotCommand; // Команда обрезки графиков
         private readonly ICommand changeVisibilityOfFirstVertVisorCommand; // Команда смены видимости первого вертикального визира
         private readonly ICommand changeVisibilityOfSecondVertVisorCommand; // Команда смены видимости второго вертикального визира
+        private readonly ICommand playFileCommand;
 
         private bool isParserInitialized = false; // Флаг, указывающий, инициализирован ли синтаксический анализатор файлов формата COMTRADE
         private int numberOfPlots = 0; // Количество графиков
@@ -102,6 +104,7 @@ namespace COMTRADEInsight.ViewModels
             cropPlotCommand = new SimpleCommand(CropPlot);
             changeVisibilityOfFirstVertVisorCommand = new SimpleCommand(FirstVertVisorChangeVisibility);
             changeVisibilityOfSecondVertVisorCommand = new SimpleCommand(SecondVertVisorChangeVisibility);
+            playFileCommand = new SimpleCommand(PlayFile);
         }
 
         #endregion
@@ -261,6 +264,11 @@ namespace COMTRADEInsight.ViewModels
         public ICommand СhangeVisibilityOfSecondVertVisorCommand
         {
             get { return changeVisibilityOfSecondVertVisorCommand; }
+        }
+
+        public ICommand PlayFileCommand
+        {
+            get { return playFileCommand; }
         }
 
         #endregion
@@ -1246,7 +1254,7 @@ namespace COMTRADEInsight.ViewModels
                     for (int i = 0; i < analogChannelsCount; i++)
                     {
                         // Скрытие векторной диаграммы
-                        vectors[i].IsVisible = false; 
+                        vectors[i].IsVisible = false;
 
                         // Зануление показателей
                         ((Label)firstHarmonicTable.Controls["phaseLabel" + i]!).Text = 0 + "°";
@@ -1803,6 +1811,28 @@ namespace COMTRADEInsight.ViewModels
 
                 if (secondVisorSample == -1) // Изначально второй вертикальный визир не установлен, смена видимости устанавливает визир
                     secondVisorSample = 0;
+            }
+        }
+
+        private void PlayFile()
+        {
+            firstVisorSample = 0;
+            WaveFormat waveFormat = WaveFormat.CreateIeeeFloatWaveFormat((int)parser!.Schema!.SampleRates![0].Rate, 2);
+            IWavePlayer waveOut = new WaveOutEvent();
+
+            var provider = new BufferedWaveProvider(waveFormat);
+
+            provider.BufferLength = channelsData[0].Count * sizeof(float);
+            provider.AddSamples(ToByteArray(channelsData[0].ConvertAll(e => (float)e).ToArray()), 0, channelsData[0].Count * sizeof(float));
+
+            waveOut.Init(provider);
+            waveOut.Play();
+
+            byte[] ToByteArray(float[] floatArray)
+            {
+                byte[] byteArray = new byte[floatArray.Length * sizeof(float)];
+                Buffer.BlockCopy(floatArray, 0, byteArray, 0, byteArray.Length);
+                return byteArray;
             }
         }
 

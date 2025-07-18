@@ -1,4 +1,7 @@
+using COMTRADE;
 using COMTRADEInsight.ViewModels;
+using Microsoft.VisualBasic.ApplicationServices;
+using NAudio.Wave;
 
 namespace COMTRADEInsight
 {
@@ -13,6 +16,7 @@ namespace COMTRADEInsight
         private readonly MainWindowViewModel viewModel = new(); // ViewModel главного окна
         private readonly System.Windows.Forms.Timer repeatingTimer = new(); // Таймер повторения нажатий кнопок при их зажатии
         private readonly System.Windows.Forms.Timer dynamicTimer = new(); // Таймер для эмуляции динамической отрисовки
+        private readonly System.Windows.Forms.Timer PlayingTimer = new(); // Таймер для эмуляции динамической отрисовки
         private bool isMoveButtonPressed = false; // Флаг, указывающий, нажата ли одна из кнопок перемещения
         private Button? currentlyPressedMoveButton = null; // Указатель на кнопку перемещения
 
@@ -51,6 +55,9 @@ namespace COMTRADEInsight
             repeatingTimer.Interval = 60; // Интервал повторения в миллисекундах
             repeatingTimer.Tick += RepeatingTimer_Tick!;
 
+            PlayingTimer.Interval = 1;
+            PlayingTimer.Tick += PlayingTimer_Tick!;
+
             dynamicTimer.Interval = 100; // Интервал повторения в миллисекундах
             dynamicTimer.Tick += DynamicTimer_Tick!;
 
@@ -69,6 +76,8 @@ namespace COMTRADEInsight
                     scaleXDownButon.Enabled = true;
                     scaleYUpButon.Enabled = true;
                     dynamicPlotButton.Enabled = true;
+                    playFileButton.Enabled = true;
+                    PlayingTimer.Stop();
 
                     firstVertVisorChangeVisibilityButton.Enabled = true;
                     firstVertVisorChangeVisibilityButton.BackColor = SystemColors.GradientActiveCaption;
@@ -315,6 +324,19 @@ namespace COMTRADEInsight
                     MessageBox.Show("Обрезка графика невозможна.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             };
+
+            playFileButton.Click += (sender, e) =>
+            {
+                try
+                {
+                    viewModel.PlayFileCommand.Execute(null);
+                    PlayingTimer.Start();
+                }
+                catch
+                {
+                    MessageBox.Show("Проигрывание невозможно.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            };
         }
 
         #endregion
@@ -349,6 +371,18 @@ namespace COMTRADEInsight
             if (isMoveButtonPressed)
             {
                 currentlyPressedMoveButton!.PerformClick();
+            }
+        }
+
+        private void PlayingTimer_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+                viewModel.MoveForthCommand.Execute(this);
+            }
+            catch 
+            { 
+
             }
         }
 

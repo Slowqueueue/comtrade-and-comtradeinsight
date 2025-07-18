@@ -40,6 +40,7 @@
             signalPlotsPanel = new Panel();
             moveForthButton = new Button();
             buttonsPanel = new Panel();
+            playFileButton = new Button();
             firstVertVisorChangeVisibilityButton = new Button();
             secondVertVisorChangeVisibilityButton = new Button();
             cropPlotButton = new Button();
@@ -134,6 +135,7 @@
             // buttonsPanel
             // 
             buttonsPanel.BorderStyle = BorderStyle.FixedSingle;
+            buttonsPanel.Controls.Add(playFileButton);
             buttonsPanel.Controls.Add(firstVertVisorChangeVisibilityButton);
             buttonsPanel.Controls.Add(secondVertVisorChangeVisibilityButton);
             buttonsPanel.Controls.Add(cropPlotButton);
@@ -147,8 +149,19 @@
             buttonsPanel.Controls.Add(moveForthButton);
             buttonsPanel.Location = new Point(4, 27);
             buttonsPanel.Name = "buttonsPanel";
-            buttonsPanel.Size = new Size(1256, 89);
+            buttonsPanel.Size = new Size(1370, 89);
             buttonsPanel.TabIndex = 6;
+            // 
+            // playFileButton
+            // 
+            playFileButton.Cursor = Cursors.Hand;
+            playFileButton.Enabled = false;
+            playFileButton.Location = new Point(1257, 3);
+            playFileButton.Name = "playFileButton";
+            playFileButton.Size = new Size(108, 81);
+            playFileButton.TabIndex = 17;
+            playFileButton.Text = "Слушать";
+            playFileButton.UseVisualStyleBackColor = true;
             // 
             // firstVertVisorChangeVisibilityButton
             // 
@@ -417,5 +430,6 @@
         private Label currentSampleLabel;
         private Button secondVertVisorChangeVisibilityButton;
         private Button firstVertVisorChangeVisibilityButton;
+        private Button playFileButton;
     }
 }
