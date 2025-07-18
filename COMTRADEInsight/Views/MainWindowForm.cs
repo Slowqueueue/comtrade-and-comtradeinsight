@@ -299,7 +299,7 @@ namespace COMTRADEInsight
             {
                 try
                 {
-                    viewModel.ÑhangeVisibilityOfFirstVertVisorCommand.Execute(null);
+                    viewModel.ChangeVisibilityOfFirstVertVisorCommand.Execute(null);
 
                     // Ñìåíà ñîñòîÿíèÿ êíîïêè
                     UpdateButtonState(sender!);
@@ -314,7 +314,7 @@ namespace COMTRADEInsight
             {
                 try
                 {
-                    viewModel.ÑhangeVisibilityOfSecondVertVisorCommand.Execute(null);
+                    viewModel.ChangeVisibilityOfSecondVertVisorCommand.Execute(null);
 
                     // Ñìåíà ñîñòîÿíèÿ êíîïêè
                     UpdateButtonState(sender!);

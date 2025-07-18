@@ -41,8 +41,8 @@ namespace COMTRADEInsight.ViewModels
         private readonly ICommand scaleYDownCommand; // Команда уменьшения масштаба графиков по Y
         private readonly ICommand emulateDynamicCommand; // Команда эмуляции динамической отрисовки
         private readonly ICommand cropPlotCommand; // Команда обрезки графиков
-        private readonly ICommand toggleVisibilityOfFirstVertVisorCommand; // Команда смены видимости первого вертикального визира
-        private readonly ICommand toggleVisibilityOfSecondVertVisorCommand; // Команда смены видимости второго вертикального визира
+        private readonly ICommand changeVisibilityOfFirstVertVisorCommand; // Команда смены видимости первого вертикального визира
+        private readonly ICommand changeVisibilityOfSecondVertVisorCommand; // Команда смены видимости второго вертикального визира
         private readonly ICommand playFileCommand;
 
         private bool isParserInitialized = false; // Флаг, указывающий, инициализирован ли синтаксический анализатор файлов формата COMTRADE
@@ -102,8 +102,8 @@ namespace COMTRADEInsight.ViewModels
             scaleYDownCommand = new ObjectConditionCommand(ScaleYDown, CanScaleYDown);
             emulateDynamicCommand = new ObjectCommand(EmulateDynamic);
             cropPlotCommand = new SimpleCommand(CropPlot);
-            toggleVisibilityOfFirstVertVisorCommand = new SimpleCommand(FirstVertVisorChangeVisibility);
-            toggleVisibilityOfSecondVertVisorCommand = new SimpleCommand(SecondVertVisorChangeVisibility);
+            changeVisibilityOfFirstVertVisorCommand = new SimpleCommand(FirstVertVisorChangeVisibility);
+            changeVisibilityOfSecondVertVisorCommand = new SimpleCommand(SecondVertVisorChangeVisibility);
             playFileCommand = new SimpleCommand(PlayFile);
         }
 
@@ -253,17 +253,17 @@ namespace COMTRADEInsight.ViewModels
         /// <summary>
         /// Получает команду смены видимости первого вертикального визира.
         /// </summary>
-        public ICommand СhangeVisibilityOfFirstVertVisorCommand
+        public ICommand ChangeVisibilityOfFirstVertVisorCommand
         {
-            get { return toggleVisibilityOfFirstVertVisorCommand; }
+            get { return changeVisibilityOfFirstVertVisorCommand; }
         }
 
         /// <summary>
         /// Получает команду смены видимости второго вертикального визира.
         /// </summary>
-        public ICommand СhangeVisibilityOfSecondVertVisorCommand
+        public ICommand ChangeVisibilityOfSecondVertVisorCommand
         {
-            get { return toggleVisibilityOfSecondVertVisorCommand; }
+            get { return changeVisibilityOfSecondVertVisorCommand; }
         }
 
         public ICommand PlayFileCommand
