@@ -1,0 +1,24 @@
+name: Run Unit Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:   
+  
+jobs:
+  test:
+    runs-on: windows-latest
+  
+    steps:
+      - uses: actions/checkout@v4
+  
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 9.0.x
+  
+      - name: Build Solution
+        run: dotnet build COMTRADE.sln --configuration Release
+  
+      - name: Run Tests
+        run: dotnet test COMTRADE.Tests/COMTRADE.Tests.csproj --configuration Release --no-build
